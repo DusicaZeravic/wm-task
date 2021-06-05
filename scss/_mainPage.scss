@@ -36,7 +36,12 @@ main {
             }
         }
     }
-
+    .small-screen {
+        display: none;
+    }
+    .slider-section {
+        display: none;
+    }
     .first-section,
     .second-section {
         width: 420px;
@@ -116,7 +121,7 @@ main {
     .second-section {
         margin-top: 40px;
         h2 {
-            margin-top: 0;
+            margin-top: 0px;
         }
         .first-boxes,
         .second-boxes {
@@ -166,3 +171,108 @@ main {
         }
     }  
 }
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+    main {
+        .small-screen {
+            display: none;
+        }
+        .main-section {
+            .profiles-div {
+                img {
+                    width: 135px;
+                    height: 135px;
+                }
+            }
+            .main-header {
+                width: 270px;
+                h1 {
+                    font-size: 38px;
+                }
+            }
+        }
+        .slider-section {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) and (min-width: 320px) {
+    main {
+        .owl-carousel {
+            display: none;
+            visibility: hidden;
+        }
+        .small-screen {
+            display: block;
+            margin-top: -160px;
+        }
+        .main-section {
+            height: 120px;
+            .profiles-div {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                img {
+                    margin: 15px auto;
+                    width: 99px;
+                    height: 98px;
+                }
+            }
+            .main-header {
+                display: none;
+            }
+        }
+        .slider-section {
+            width: 100%;
+            height: 60px;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: #757575;
+            border-bottom: 1px solid #757575;
+        }
+        .first-section,
+        .second-section {
+            h2 {
+                margin: 20px auto;
+            }
+        }
+        .first-section {
+            margin-bottom: 120px;
+            .first-row,
+            .second-row {
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    .text {
+                        height: 0px;
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .first-row {
+                margin-bottom: 80px;
+            }
+        }
+        .second-section {
+            height: 580px;
+            .first-boxes,
+            .second-boxes {
+                display: flex;
+                flex-direction: column;
+                div {
+                    margin: 15px auto;
+                }
+            }
+            .first-boxes {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+

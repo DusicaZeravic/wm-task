@@ -1,0 +1,15 @@
+#search-section {
+    display: none;
+    width: 100%;
+    height: 40px;
+    .search-input {
+        float: right;
+        margin-right: 30px;
+        width: 290px;
+        height: 25px;
+        border: 1px solid #bababa;
+        &:focus {
+            outline-color: #bababa;
+        }
+    }
+}

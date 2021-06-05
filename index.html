@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="/css/main.css">
     <title>Wireless Media</title>
 </head>
@@ -15,22 +21,80 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="./resources/img/wm_logo.png" alt="logo">
+            <a>
+                <img src="./resources/img/wm_logo.png" alt="logo">
+            </a>
         </div>
         <div class="list-items">
             <ul>
-                <li class="home-item">Home</li>
-                <li class="about-us-item">About Us</li>
-                <li class="work-item">Our Work</li>
-                <li class="contact-item">Contact</li>
+                <a>
+                    <li class="home-item">Home</li>
+                </a>
+                <a>
+                    <li class="about-us-item">About Us</li>
+                </a>
+                <a>
+                    <li class="work-item">Our Work</li>
+                </a>
+                <a>
+                    <li class="contact-item">Contact</li>
+                </a>
             </ul>
         </div>
-        <div class="search">
+        <div class="list-items-icons">
+            <ul>
+                <a>
+                    <li class="home-icon"></li>
+                </a>
+                <a>
+                    <li class="about-us-icon"></li>
+                </a>
+                <a>
+                    <li class="work-icon"></li>
+                </a>
+                <a>
+                    <li class="contact-icon"></li>
+                </a>
+            </ul>
+        </div>
+        <div id="search" onclick="toggleSearchInput()">
             <i class="fas fa-search"></i>
         </div>
     </nav>
+    <section id="search-section">
+        <input type="text" class="search-input">
+    </section>
     <main>
-        <section class="main-section">
+        <div class="owl-carousel owl-theme">
+            <section class="main-section">
+                <div class="gradient-line"></div>
+                <div class="profiles-div">
+                    <img src="./resources/img/profiles.png" alt="profiles">
+                </div>
+                <div class="main-header">
+                    <h1>Lorem ipsum dolor sit</h1>
+                </div>
+            </section>
+            <section class="main-section">
+                <div class="gradient-line"></div>
+                <div class="profiles-div">
+                    <img src="./resources/img/profiles.png" alt="profiles">
+                </div>
+                <div class="main-header">
+                    <h1>Lorem ipsum dolor sit</h1>
+                </div>
+            </section>
+            <section class="main-section">
+                <div class="gradient-line"></div>
+                <div class="profiles-div">
+                    <img src="./resources/img/profiles.png" alt="profiles">
+                </div>
+                <div class="main-header">
+                    <h1>Lorem ipsum dolor sit</h1>
+                </div>
+            </section>
+        </div>
+        <section class="main-section small-screen">
             <div class="gradient-line"></div>
             <div class="profiles-div">
                 <img src="./resources/img/profiles.png" alt="profiles">
@@ -38,6 +102,11 @@
             <div class="main-header">
                 <h1>Lorem ipsum dolor sit</h1>
             </div>
+        </section>
+        <section class="slider-section">
+            <div id="prev-button" onclick="showPreviousItem()"><i class="fas fa-angle-left"></i></div>
+            <div id="current"></div>
+            <div id="next-button" onclick="showNextItem()"><i class="fas fa-angle-right"></i></div>
         </section>
         <section class="first-section">
             <div class="first-row">
