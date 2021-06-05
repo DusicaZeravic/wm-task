@@ -1,0 +1,75 @@
+footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dbdbdd;
+    line-height: 60px;
+    margin-top: 80px;
+    .contact {
+        width: 150px;
+        height: 45px;
+        display: flex;
+        margin: 10px 0px 0px 40px;
+        a {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background-color: #f3f3f4;
+            margin-left: 12px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.facebook {
+                background-image: url(../resources/img/facebook.png);
+                &:hover, &:active, &:visited, &:focus {
+                    background-image: url(../resources/img/facebook_colored.png);
+                }
+            }
+            &.twitter {
+                background-image: url(../resources/img/twitter.png);
+                &:hover, &:active, &:visited, &:focus {
+                    background-image: url(../resources/img/twitter_colored.png);
+                }
+            }
+            &.mail {
+                background-image: url(../resources/img/mail.png);
+                &:hover, &:active, &:visited, &:focus {
+                    background-image: url(../resources/img/mail_colored.png);
+                }
+            }
+        }
+    }
+    .navigation {
+        width: 380px;
+        ul {
+            li {
+                cursor: pointer;
+                display: inline-block;
+                margin-left: 5px;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+        }
+    }
+    .top-arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #f3f3f4;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 40px 0px 0px;
+        background-image: url(../resources/img/top.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &:hover, &:active, &:visited, &:focus {
+            background-image: url(../resources/img/top_colored.png);
+        }
+    }
+}
