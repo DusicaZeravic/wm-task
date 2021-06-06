@@ -1,5 +1,7 @@
 # Wireless Media Task - FrontEnd Developer Junior
 
+[DEMO](https://dusicazeravic.github.io/wm-task/)
+
 ## Instructions on how to run it on your computer:
 
 Install following:
