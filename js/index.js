@@ -2,6 +2,7 @@ const previousButton = document.getElementById('prev-button');
 let currentItem = document.getElementById('current');
 const nextButton = document.getElementById('next-button');
 const burgerMenu = document.getElementById('burger-menu');
+const topArrow = document.getElementById('top-arrow');
 let sliderItemsArr = ['LOREM IPSUM DOLOR SIT', 'LOREM IPSUM DOLOR SIT 1', 'LOREM IPSUM DOLOR SIT 2'];
 let activeSliderItemIndex = 0;
 
@@ -14,7 +15,7 @@ const showNextItem = () => {
     activeSliderItemIndex++;
   }
   currentItem.innerHTML = sliderItemsArr[activeSliderItemIndex];
-}
+};
 
 const showPreviousItem = () => {
   if (activeSliderItemIndex === 0) {
@@ -23,11 +24,11 @@ const showPreviousItem = () => {
     activeSliderItemIndex--;
   }
   currentItem.innerHTML = sliderItemsArr[activeSliderItemIndex];
-}
+};
 
 const toggle = (element) => {
   return element.classList.toggle("show");
-}
+};
 
 const toggleSearchInput = () => {
   const searchSection = document.getElementById('search-section');
@@ -37,6 +38,10 @@ const toggleSearchInput = () => {
 const toggleNav = () => {
   const listItemsDiv = document.getElementById('burger-menu-items');
   toggle(listItemsDiv);
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 $(document).ready(function () {

@@ -62,7 +62,7 @@ footer {
             }
         }
     }
-    .top-arrow {
+    #top-arrow {
         width: 40px;
         height: 40px;
         background-color: $icon-background-color;
@@ -90,7 +90,7 @@ footer {
         .navigation {
             display: none;
         }
-        .top-arrow {
+        #top-arrow {
             margin-right: 15px;
         }
     }

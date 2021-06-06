@@ -73,6 +73,7 @@ main {
                     height: 115px;
                     background-color: $box-background-color;
                     @include background-image-center;
+                    cursor: pointer;
                 }
                 .box-one {
                     background-image: url(../resources/img/main_ourWork.png);
@@ -104,6 +105,7 @@ main {
                             background-color: $icon-background-color;
                             border: none;
                             font-size: 11px;
+                            cursor: pointer;
                             &:hover {
                                 background-color: $home-color;
                                 color: #fff;
@@ -134,6 +136,7 @@ main {
                 background-color: $box-background-color;
                 width: 190px;
                 height: 115px;
+                cursor: pointer;
             }
         }
         .first-boxes,
@@ -242,6 +245,11 @@ main {
             @include flex-position(space-around, center, none);
             color: $text-color;
             border-bottom: 1px solid $text-color;
+            div {
+                i {
+                    cursor: pointer;
+                }
+            }
         }
         .first-section,
         .second-section {
