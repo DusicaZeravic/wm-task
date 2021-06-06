@@ -2,3 +2,19 @@ $home-color: #bbd547;
 $about-us-color: #81b36e;
 $work-color: #429099;
 $contact-color: #1375b8;
+$icon-color: #bababa;
+$text-color: #757575;
+$icon-background-color: #f3f3f4;
+$box-background-color: #e9e9e9;
+
+@mixin flex-position($justify-content, $align-items, $flex-direction) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin background-image-center {
+    background-position: center;
+    background-repeat: no-repeat;
+}

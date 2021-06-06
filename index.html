@@ -57,12 +57,31 @@
                 </a>
             </ul>
         </div>
+        <div id="burger-menu" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </div>
         <div id="search" onclick="toggleSearchInput()">
             <i class="fas fa-search"></i>
         </div>
     </nav>
-    <section id="search-section">
+    <div id="search-section">
         <input type="text" class="search-input">
+    </div>
+    <section id="burger-menu-items">
+        <ul>
+            <a>
+                <li class="home">Home</li>
+            </a>
+            <a>
+                <li class="about-us">About Us</li>
+            </a>
+            <a>
+                <li class="work">Our Work</li>
+            </a>
+            <a>
+                <li class="contact">Contact</li>
+            </a>
+        </ul>
     </section>
     <main>
         <div class="owl-carousel owl-theme">
@@ -110,7 +129,9 @@
         </section>
         <section class="first-section">
             <div class="first-row">
-                <h2>Who we are</h2>
+                <div class="title">
+                    <h2>Who we are</h2>
+                </div>
                 <div class="content">
                     <div class="box-one"></div>
                     <div class="text">
@@ -139,7 +160,9 @@
             </div>
         </section>
         <section class="second-section">
-            <h2>What we do</h2>
+            <div class="title">
+                <h2>What we do</h2>
+            </div>
             <div class="first-boxes">
                 <div></div>
                 <div></div>

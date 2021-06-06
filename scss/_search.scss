@@ -2,14 +2,27 @@
     display: none;
     width: 100%;
     height: 40px;
+    text-align: right;
     .search-input {
-        float: right;
         margin-right: 30px;
         width: 290px;
         height: 25px;
-        border: 1px solid #bababa;
+        border: 1px solid $icon-color;
         &:focus {
-            outline-color: #bababa;
+            outline-color: $icon-color;
+        }
+    }
+}
+
+#search-section.show {
+    display: block;
+}
+
+@media only screen and (max-width: 479px) {
+    #search-section {
+        text-align: center;
+        .search-input {
+            margin-right: 0px;
         }
     }
 }

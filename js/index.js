@@ -1,37 +1,43 @@
 const previousButton = document.getElementById('prev-button');
 let currentItem = document.getElementById('current');
 const nextButton = document.getElementById('next-button');
+const burgerMenu = document.getElementById('burger-menu');
 let sliderItemsArr = ['LOREM IPSUM DOLOR SIT', 'LOREM IPSUM DOLOR SIT 1', 'LOREM IPSUM DOLOR SIT 2'];
-let i = 0;
+let activeSliderItemIndex = 0;
 
-currentItem.innerHTML = sliderItemsArr[i];
+currentItem.innerHTML = sliderItemsArr[activeSliderItemIndex];
 
 const showNextItem = () => {
-  if (i === sliderItemsArr.length - 1) {
-    i = 0;
+  if (activeSliderItemIndex === sliderItemsArr.length - 1) {
+    activeSliderItemIndex = 0;
   } else {
-    i++;
+    activeSliderItemIndex++;
   }
-  currentItem.innerHTML = sliderItemsArr[i];
+  currentItem.innerHTML = sliderItemsArr[activeSliderItemIndex];
 }
 
 const showPreviousItem = () => {
-  if (i === 0) {
-    i = sliderItemsArr.length - 1;
+  if (activeSliderItemIndex === 0) {
+    activeSliderItemIndex = sliderItemsArr.length - 1;
   } else {
-    i--;
+    activeSliderItemIndex--;
   }
-  currentItem.innerHTML = sliderItemsArr[i];
+  currentItem.innerHTML = sliderItemsArr[activeSliderItemIndex];
+}
+
+const toggle = (element) => {
+  return element.classList.toggle("show");
 }
 
 const toggleSearchInput = () => {
   const searchSection = document.getElementById('search-section');
-  if (searchSection.style.display === "none") {
-    searchSection.style.display = "block";
-  } else {
-    searchSection.style.display = "none";
-  }
+  toggle(searchSection);
 };
+
+const toggleNav = () => {
+  const listItemsDiv = document.getElementById('burger-menu-items');
+  toggle(listItemsDiv);
+}
 
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({

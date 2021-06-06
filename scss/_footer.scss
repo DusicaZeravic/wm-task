@@ -1,8 +1,9 @@
+@import "_variables";
+
 footer {
     width: 100%;
     height: 60px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-position(space-between, none, none);
     background-color: #dbdbdd;
     line-height: 60px;
     margin-top: 80px;
@@ -15,29 +16,35 @@ footer {
             cursor: pointer;
             width: 40px;
             height: 40px;
-            background-color: #f3f3f4;
+            background-color: $icon-background-color;
             margin-left: 12px;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-repeat: no-repeat;
-            background-position: center;
+            @include flex-position(center, center, none);
+            @include background-image-center;
             &.facebook {
                 background-image: url(../resources/img/facebook.png);
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     background-image: url(../resources/img/facebook_colored.png);
                 }
             }
             &.twitter {
                 background-image: url(../resources/img/twitter.png);
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     background-image: url(../resources/img/twitter_colored.png);
                 }
             }
             &.mail {
                 background-image: url(../resources/img/mail.png);
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     background-image: url(../resources/img/mail_colored.png);
                 }
             }
@@ -58,30 +65,34 @@ footer {
     .top-arrow {
         width: 40px;
         height: 40px;
-        background-color: #f3f3f4;
+        background-color: $icon-background-color;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-position(center, center, none);
         margin: 10px 30px 0px 0px;
         background-image: url(../resources/img/top.png);
-        background-position: center;
-        background-repeat: no-repeat;
+        @include background-image-center;
         cursor: pointer;
-        &:hover, &:active, &:visited, &:focus {
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
             background-image: url(../resources/img/top_colored.png);
         }
     }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 480px) {
-    .navigation {
-        display: none;
+@media only screen and (max-width: 768px) {
+    footer {
+        margin-top: 55px;
+        .contact {
+            margin-left: 10px;
+        }
+        .navigation {
+            display: none;
+        }
+        .top-arrow {
+            margin-right: 15px;
+        }
     }
-}
-
-@media only screen and (max-width: 479px) and (min-width: 320px) {
-    .navigation {
-        display: none;
-    }
+    
 }

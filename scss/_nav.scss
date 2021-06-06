@@ -3,8 +3,7 @@
 nav {
     width: 100%;
     height: 45px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-position(space-between, none, none);
     margin-bottom: 20px;
     line-height: 45px;
     .logo {
@@ -25,33 +24,45 @@ nav {
                 cursor: pointer;
                 color: #a1a3a6;
                 &:not(:last-child):after {
-                    content: '/';
+                    content: "/";
                     margin-left: 4px;
                 }
                 li {
                     display: inline-block;
                     text-transform: uppercase;
-                    margin-left: 2px;  
+                    margin-left: 2px;
                 }
             }
-            
+
             .home-item {
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     color: $home-color;
                 }
             }
             .about-us-item {
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     color: $about-us-color;
                 }
             }
             .work-item {
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     color: $work-color;
                 }
             }
             .contact-item {
-                &:hover, &:active, &:visited, &:focus {
+                &:hover,
+                &:active,
+                &:visited,
+                &:focus {
                     color: $contact-color;
                 }
             }
@@ -60,12 +71,17 @@ nav {
     .list-items-icons {
         display: none;
     }
+    #burger-menu {
+        display: none;
+        padding: 0px 10px;
+    }
     #search {
         width: 20px;
         margin-right: 30px;
+        padding: 0px 10px;
         i {
             cursor: pointer;
-            color: #bababa;
+            color: $icon-color;
         }
     }
 }
@@ -93,44 +109,62 @@ nav {
                         margin-left: 15px;
                         width: 25px;
                         height: 20px;
-                        background-repeat: no-repeat;
-                        background-position: center; 
+                        @include background-image-center;
                         &.home-icon {
                             background-image: url(../resources/img/nav_home.png);
-                            &:hover, &:active, &:visited, &:focus {
+                            &:hover,
+                            &:active,
+                            &:visited,
+                            &:focus {
                                 background-image: url(../resources/img/nav_home_colored.png);
                             }
                         }
                         &.about-us-icon {
                             background-image: url(../resources/img/nav_aboutUs.png);
-                            &:hover, &:active, &:visited, &:focus {
+                            &:hover,
+                            &:active,
+                            &:visited,
+                            &:focus {
                                 background-image: url(../resources/img/nav_aboutUs_colored.png);
                             }
                         }
                         &.work-icon {
                             background-image: url(../resources/img/nav_ourWork.png);
-                            &:hover, &:active, &:visited, &:focus {
+                            &:hover,
+                            &:active,
+                            &:visited,
+                            &:focus {
                                 background-image: url(../resources/img/nav_ourWork_colored.png);
                             }
                         }
                         &.contact-icon {
                             background-image: url(../resources/img/nav_contact.png);
-                            &:hover, &:active, &:visited, &:focus {
+                            &:hover,
+                            &:active,
+                            &:visited,
+                            &:focus {
                                 background-image: url(../resources/img/nav_contact_colored.png);
                             }
                         }
-                    }  
+                    }
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width: 479px) and (min-width: 320px) {
+@media only screen and (max-width: 479px) {
     nav {
+        .logo {
+            flex-grow: 1;
+        }
         .list-items {
             display: none;
         }
+        #burger-menu {
+            display: block;
+            color: $icon-color;
+            cursor: pointer;
+        }
     }
 }
-

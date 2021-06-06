@@ -1,0 +1,33 @@
+@import "_variables";
+
+#burger-menu-items {
+    display: none;
+    ul {
+        li {
+            height: 23px;
+            line-height: 23px;
+            padding: 0px 10px;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #fff;
+            &.home {
+                background-color: $home-color;
+            }
+            &.about-us {
+                background-color: $about-us-color;
+            }
+            &.work {
+                background-color: $work-color;
+            }
+            &.contact {
+                background-color: $contact-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    #burger-menu-items.show {
+        display: block;
+    }
+}
